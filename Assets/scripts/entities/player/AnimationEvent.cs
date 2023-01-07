@@ -13,4 +13,9 @@ public class AnimationEvent : MonoBehaviour
     }
 
     public void onAnimationExit() { player.AnimationExitEvent(); }
+
+    public void PickUpEnter()
+    {
+        player.PikcUpColliderEnterEvent();
+    }
 }

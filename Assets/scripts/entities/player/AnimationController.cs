@@ -26,7 +26,7 @@ public class AnimationController
         this.movement = movement;
         isPickingUp= pick;
         TryPlayAnim();
-        Debug.Log(movement);
+    
     }
 
 

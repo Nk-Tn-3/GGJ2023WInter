@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     public PlayerMovementNS.PlayerInput input { get; private set; }
     [SerializeField]private Animator animator;
-
+    [SerializeField] private SphereCollider pickUpCollider;
     private AnimationController playerAnimationController;
 
 
@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
     {
         input = GetComponent<PlayerMovementNS.PlayerInput>();
         playerAnimationController = new AnimationController();
-        playerAnimationController.Initizalize(animator);
+        playerAnimationController.Initizalize(animator); 
+        pickUpCollider.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,11 +58,23 @@ public class Player : MonoBehaviour
     public void AnimationExitEvent()
     {
         playerAnimationController.PickUpEnd();
+        pickUpCollider.gameObject.SetActive(false);
+
     }
     public void AnimationEnterEvent() {
         playerAnimationController.PickUpStart();
+
     }
 
+    public void PikcUpColliderEnterEvent()
+    {
+        pickUpCollider.gameObject.SetActive(true);
+    }
+
+    public void PickUp()
+    {
+        pickUpCollider.gameObject.SetActive(false);
+    }
 
     
 }
