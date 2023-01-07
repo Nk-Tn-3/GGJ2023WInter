@@ -11,6 +11,7 @@ public class AnimationController
 
     
     private bool isLocked;
+    private bool isPickingUp;
 
     private Vector2 movement;
     Animator animator;
@@ -20,9 +21,10 @@ public class AnimationController
     {
         animator = controller;
     }
-    public void Update(Vector2 movement)
+    public void Update(Vector2 movement,bool pick)
     {
         this.movement = movement;
+        isPickingUp= pick;
         TryPlayAnim();
         Debug.Log(movement);
     }
@@ -31,6 +33,11 @@ public class AnimationController
     private void TryPlayAnim()
     {
         if(isLocked) return;
+        if (isPickingUp)
+        {
+            animator.SetTrigger("PickUp");
+            return;
+        }
         if (movement == Vector2.zero)
         {
             Idle();
@@ -65,9 +72,17 @@ public class AnimationController
 
     }
 
-    private void PickUp()
+    public void PickUpStart()
     {
+        isLocked = true;
+        isIdle = false;
+        isWalking = false;
+        animator.SetBool("Idle", isIdle);
+        animator.SetBool("Move", isWalking);
+    }
 
+    public void PickUpEnd() {
+        isLocked = false;
     }
 
 

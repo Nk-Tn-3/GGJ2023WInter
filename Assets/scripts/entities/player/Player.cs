@@ -49,15 +49,17 @@ public class Player : MonoBehaviour
     void ReadMovementInput()
     {
         movementData=input.playerActions.Movement.ReadValue<Vector2>();
-        playerAnimationController.Update(movementData);
+        bool pick = input.playerActions.PickUp.triggered;
+        playerAnimationController.Update(movementData,pick);
         
     }
 
     public void AnimationExitEvent()
     {
-
+        playerAnimationController.PickUpEnd();
     }
     public void AnimationEnterEvent() {
+        playerAnimationController.PickUpStart();
     }
 
 
