@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Wyatt Lobby Test 1.unity
+    guid: 9eaaea6d28d23c84facac653b1929228
+  - enabled: 1
+    path: Assets/Scenes/WyattTest1.unity
+    guid: 4b1548a3f6dbf774abbb33e8bf372923
   m_configObjects: {}
