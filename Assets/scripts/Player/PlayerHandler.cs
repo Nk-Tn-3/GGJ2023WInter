@@ -19,6 +19,6 @@ public class PlayerHandler : MonoBehaviour
         gameObject.transform.SetParent(GameManager.instance.transform);
 
         //swap out player apearances
-        //player_mesh.material = GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_materials[player_id];
+        player_mesh.material = GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_materials[player_id];
     }
 }

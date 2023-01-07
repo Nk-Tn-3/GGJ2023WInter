@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player2
+  - Lobby_Controller
   layers:
   - Default
   - TransparentFX

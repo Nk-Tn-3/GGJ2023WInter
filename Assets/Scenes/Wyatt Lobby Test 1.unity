@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 1765680549}
   m_Layer: 0
   m_Name: Lobby Controller
-  m_TagString: Untagged
+  m_TagString: Lobby_Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,7 +1085,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5ba87183d7a2d49b4f5f83c4f763a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_models: []
+  player_materials:
+  - {fileID: 2100000, guid: 5698d83447edfc046aa40d5298ab42c9, type: 2}
+  - {fileID: 2100000, guid: 9c00263cf266c4147b7196457557f73d, type: 2}
+  - {fileID: 2100000, guid: 953d8cbc60639514184aaddcd2ef1a3a, type: 2}
+  - {fileID: 2100000, guid: 1a514cd6963e7a74e9fc414f019d17e8, type: 2}
   game_scene_name: WyattTest1
 --- !u!1 &2009860582
 GameObject:
