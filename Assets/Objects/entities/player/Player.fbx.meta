@@ -3,7 +3,42 @@ guid: 02d9c9ab300012d4ca9eb5ba1e7d37ae
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Cloth
+    second: {fileID: 2100000, guid: 77529ad569828994688d825082c33060, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Eyes
+    second: {fileID: 2100000, guid: 03e30601d4ae1704992a88b3215f59d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Hair
+    second: {fileID: 2100000, guid: f49f5dbc77b5428449011b2f8e908fbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Hat
+    second: {fileID: 2100000, guid: 838ec64fc8e1ff04f879d3b208c92af6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Main
+    second: {fileID: 2100000, guid: 3253380b516698342ac062b89b3c181a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Pants
+    second: {fileID: 2100000, guid: 5bac9611834416e46b519dc6b5e55b13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player_Shoes
+    second: {fileID: 2100000, guid: 54ce852f745cab640baed03f220c143a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -76,7 +111,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []

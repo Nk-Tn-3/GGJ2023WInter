@@ -15,36 +15,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Look",
-                    "type": "Value",
-                    "id": "520af043-4114-4fc7-8fa8-b623668c2df7",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Zoom",
-                    "type": "Value",
-                    "id": "dbcb61db-2d3f-43e6-8f51-1c88fef93eee",
-                    "expectedControlType": "Axis",
-                    "processors": "Clamp(min=-0.1,max=0.1),Invert",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Sprint",
+                    "name": "PickUp",
                     "type": "Button",
-                    "id": "4a177779-95a7-4a96-8ad0-6a2be8551ac7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Hold(duration=1)",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "0b5b0b3b-4ccc-4eee-a791-624ac72dd659",
+                    "id": "dc2261d3-dca8-4e36-b7ef-0285a27a4ecd",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -109,45 +82,12 @@
                 },
                 {
                     "name": "",
-                    "id": "93699e1d-2303-441f-a3e0-636b4a2a9f72",
-                    "path": "<Mouse>/delta",
+                    "id": "da734eab-c817-407d-9c0a-04e7811f9d2c",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "af909469-53dd-4e51-8fd4-750f210dfec9",
-                    "path": "<Mouse>/scroll/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Zoom",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2d0cca9d-2e62-4bd0-937f-dc7b87324526",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9aa8221c-a393-42d0-8f91-8719c7164baf",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
+                    "action": "PickUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
