@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IState
 {
    
-    public voi
+    //public voi
     
 
 
