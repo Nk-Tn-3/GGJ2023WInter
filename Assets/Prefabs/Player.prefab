@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 579836003409150931}
   - component: {fileID: 579836003409150930}
   - component: {fileID: 579836003409150937}
+  - component: {fileID: 7238086174567811333}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc529a68236454c43a3ba8d730e27d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_speed: 100
+  test_speed: 10
   max_speed: 100
   acceleration: 0
   deaceleration: 0
@@ -177,3 +178,15 @@ MonoBehaviour:
   m_DefaultActionMap: New action map
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7238086174567811333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579836003409150929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a14913c9647e2041bd8650ad94be32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
