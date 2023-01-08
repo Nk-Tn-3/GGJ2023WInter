@@ -17,4 +17,12 @@ public class LobbyController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
             UnityEngine.SceneManagement.SceneManager.LoadScene(game_scene_name );
     }
+
+    private void Awake()
+    {
+        for(int i = 0; i < GameManager.instance.players.Count; i++)
+        {
+            GameManager.instance.players[i].transform.position += new Vector3(0, 10, 0);
+        }
+    }
 }

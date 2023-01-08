@@ -5,10 +5,18 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public float end_duration = 10f;
     public float gameDurationTime = 10;
     public Text timerTXT;
+    public GameObject endscreen;
+
 
     [SerializeField] string lobby_scene_name;
+
+    private void Awake()
+    {
+        endscreen.SetActive(false);
+    }
 
     private void Update()
     {
@@ -25,9 +33,19 @@ public class GameController : MonoBehaviour
         }
         else // timer has expired
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(lobby_scene_name);
+            /*UnityEngine.SceneManagement.SceneManager.LoadScene(lobby_scene_name);*/
+            EndGame();
         }
     }
 
+    private void EndGame()
+    {
+        Invoke(nameof(Leave), end_duration);
+        endscreen.SetActive(true);
+    }
 
+    private void Leave()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(lobby_scene_name);
+    }
 }
