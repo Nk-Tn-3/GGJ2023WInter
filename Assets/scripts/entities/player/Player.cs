@@ -17,6 +17,13 @@ public class Player : MonoBehaviour
     public Rigidbody Rigidbody { get; private set; }
     private Vector2 movementData;
     private bool pick;
+    public Vector3 currentRotation;
+    [SerializeField] Transform rightHand;
+    [SerializeField] Vector3 ItemPositionInHand;
+
+    public bool hasItemPickedUp;
+
+    private GameObject itemInHand;
     
 
     // Start is called before the first frame update
@@ -69,14 +76,14 @@ public class Player : MonoBehaviour
     public void ReadInteract()
     {
 
-        playerAnimationController.Update(true);
+        playerAnimationController.Update(true,hasItemPickedUp);
     }
     public void AnimationExitEvent()
     {
         playerAnimationController.PickUpEnd();
         pickUpCollider.gameObject.SetActive(false);
         currSpeed = playerSpeed;
-        playerAnimationController.Update(false);
+        playerAnimationController.Update(false,hasItemPickedUp);
     }
     public void AnimationEnterEvent() {
         playerAnimationController.PickUpStart();
@@ -89,14 +96,27 @@ public class Player : MonoBehaviour
         pickUpCollider.gameObject.SetActive(true);
     }
 
-    public void PickUp()
+    public void PickUp(GameObject obj)
     {
         pickUpCollider.gameObject.SetActive(false);
+
+        obj.GetComponent<PickUpable>().setNewPartent(rightHand);
+        obj.transform.localPosition = ItemPositionInHand;
+        obj.transform.localRotation= Quaternion.identity;
+        itemInHand= obj;
+        hasItemPickedUp = true;
+
     }
 
     public float GetPlayeSpeed()
     {
         return currSpeed;
+    }
+
+    public void Throw()
+    {
+        hasItemPickedUp = false;
+        itemInHand.GetComponent<PickUpable>().Throw(currentRotation*7);
     }
 
     /*public void UpdateDirection(Vector2 dir)

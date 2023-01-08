@@ -53,6 +53,7 @@ public class PlayerMovement
        
        
         Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
+        player.currentRotation = targetRotationDirection;
       
        rbody.AddForce(targetRotationDirection * movementSpeed - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
     }

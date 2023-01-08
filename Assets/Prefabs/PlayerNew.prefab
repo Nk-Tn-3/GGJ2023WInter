@@ -808,6 +808,8 @@ MonoBehaviour:
     RotationTime: 0.2
     deceleration: 5
   playerSpeed: 5
+  rightHand: {fileID: 3620305558625534114}
+  ItemPositionInHand: {x: -0.005, y: 0.006, z: 0.005}
 --- !u!114 &7376251989573647017
 MonoBehaviour:
   m_ObjectHideFlags: 0

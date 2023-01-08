@@ -18,4 +18,10 @@ public class AnimationEvent : MonoBehaviour
     {
         player.PikcUpColliderEnterEvent();
     }
+
+
+    public void Throw()
+    {
+        player.Throw(); 
+    }
 }

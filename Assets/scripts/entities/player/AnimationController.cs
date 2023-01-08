@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -29,20 +30,22 @@ public class AnimationController
     
     }
 
-    public void Update(bool pick)
+    public void Update(bool pick,bool hasItem)
     {
       
         isPickingUp = pick;
-        TryPlayAnim();
-
+        TryPlayAnim(hasItem);
     }
 
-    private void TryPlayAnim()
+    private void TryPlayAnim(bool hasItem=false)
     {
         if(isLocked) return;
         if (isPickingUp)
         {
-            animator.SetTrigger("PickUp");
+            if(hasItem)
+                animator.SetTrigger("Throw");
+            else
+                animator.SetTrigger("PickUp");
             return;
         }
         if (movement == Vector2.zero)
