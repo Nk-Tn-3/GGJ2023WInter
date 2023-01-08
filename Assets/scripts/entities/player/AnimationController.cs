@@ -24,7 +24,7 @@ public class AnimationController
     public void Update(Vector2 movement)
     {
         this.movement = movement;
-       
+        isPickingUp = false;
         TryPlayAnim();
     
     }
