@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private float currSpeed = 5f;
     public Rigidbody Rigidbody { get; private set; }
     private Vector2 movementData;
+    private bool pick;
     
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement.FixedUpdate();
+        movement.CallFixedUpdate();
     }
 
 
@@ -59,6 +60,9 @@ public class Player : MonoBehaviour
         bool pick = input.GetPickTrigger();
         playerAnimationController.Update(movementData,pick);
         
+        //not in use from trying to merge
+        /*if(pick)
+            pick = false;*/
     }
 
     public void AnimationExitEvent()
@@ -88,4 +92,14 @@ public class Player : MonoBehaviour
     {
         return currSpeed;
     }
+
+    /*public void UpdateDirection(Vector2 dir)
+    {
+        movementData = dir;
+    }
+
+    public void UpdateInteract()
+    {
+        pick = true;
+    }*/
 }

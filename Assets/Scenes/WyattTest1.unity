@@ -405,6 +405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e4702c9b035aa48ac991d5adaba29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDurationTime: 10
+  timerTXT: {fileID: 0}
 --- !u!1 &833724447
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +753,7 @@ PrefabInstance:
     - target: {fileID: 579836003409150929, guid: 08feb3872d63e694eb76cda8d42eb1ce,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 579836003409150936, guid: 08feb3872d63e694eb76cda8d42eb1ce,
         type: 3}

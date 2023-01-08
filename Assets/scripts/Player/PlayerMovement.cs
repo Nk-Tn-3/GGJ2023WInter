@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlayerMovement 
+public class PlayerMovement : MonoBehaviour
 {
     
     private Player player;
@@ -26,7 +26,7 @@ public class PlayerMovement
   
     }
 
-    public void FixedUpdate()
+    public void CallFixedUpdate()
 
     {
         ReadMovementInput();
