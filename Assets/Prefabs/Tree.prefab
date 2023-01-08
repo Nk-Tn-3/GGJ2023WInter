@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4924439205621834403}
   - component: {fileID: 7184341003368158825}
   - component: {fileID: 8390907275842560420}
+  - component: {fileID: 3561192607627973719}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8697317726146262972}
-  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
+  m_LocalRotation: {x: -0, y: -0.7069834, z: -0.7072302, w: 0}
   m_LocalPosition: {x: 24.42, y: 0.14, z: -24.8}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -180}
 --- !u!33 &4924439205621834403
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.57, y: 0.45, z: 4.784602}
   m_Center: {x: 0, y: 0, z: 2}
+--- !u!65 &3561192607627973719
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697317726146262972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 0, z: 3.4}
