@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38812c651892fc14bbb2fb805de37c39, type: 3}
-  m_Name: Player1Colors
+  m_Name: Player2Colors
   m_EditorClassIdentifier: 
   colors:
-  - {r: 0.49411768, g: 0, b: 0.098039225, a: 1}
-  - {r: 0.24705884, g: 0.41960788, b: 0.9058824, a: 1}
-  - {r: 0.14509805, g: 0.1254902, b: 0.13333334, a: 1}
-  - {r: 0.7803922, g: 0.627451, b: 0.21176472, a: 1}
+  - {r: 0, g: 0.49411765, b: 0.14088058, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.83137256, g: 0.4740598, b: 0.011764685, a: 0}
+  - {r: 0, g: 0.036717415, b: 1, a: 1}

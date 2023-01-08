@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     public Vector3 currentRotation;
     [SerializeField] Transform rightHand;
     [SerializeField] Vector3 ItemPositionInHand;
+    [SerializeField] CharacterColor playerColors;
+    PlayerColor color;
+    
 
     public bool hasItemPickedUp;
 
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour
         playerAnimationController.Initizalize(animator); 
         pickUpCollider.gameObject.SetActive(false);
         movement = new PlayerMovement(this);
+      
         movement.Initialize();
         
       
@@ -43,6 +47,11 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        if (playerColors != null)
+        {
+            color = new PlayerColor(this, playerColors);
+            color.Initialize();
+        }
         ReadMovementInput(Vector2.zero);
     }
     // Update is called once per frame
