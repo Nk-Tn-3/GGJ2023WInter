@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private SphereCollider pickUpCollider;
     private AnimationController playerAnimationController;
     [field:SerializeField]private PlayerMovement movement;
+    [SerializeField] private float playerSpeed=5f;
+    private float currSpeed = 5f;
     public Rigidbody Rigidbody { get; private set; }
     private Vector2 movementData;
     
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
         pickUpCollider.gameObject.SetActive(false);
         movement = new PlayerMovement(this);
         movement.Initialize();
+        currSpeed = playerSpeed;
     }
 
     // Update is called once per frame
@@ -62,10 +65,12 @@ public class Player : MonoBehaviour
     {
         playerAnimationController.PickUpEnd();
         pickUpCollider.gameObject.SetActive(false);
+        currSpeed = playerSpeed;
 
     }
     public void AnimationEnterEvent() {
         playerAnimationController.PickUpStart();
+        currSpeed = 0;
 
     }
 
@@ -79,5 +84,8 @@ public class Player : MonoBehaviour
         pickUpCollider.gameObject.SetActive(false);
     }
 
-    
+    public float GetPlayeSpeed()
+    {
+        return currSpeed;
+    }
 }

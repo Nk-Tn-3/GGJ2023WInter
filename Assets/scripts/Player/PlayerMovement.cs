@@ -14,7 +14,7 @@ public class PlayerMovement
     [field: SerializeField]
     Vector3 rotation;
 
-    [field: SerializeField] float RotationTime = 0.02f, deceleration = 0.1f;
+    [field: SerializeField] float RotationTime = 0.02f, deceleration =5f;
     Vector3 dampedTime;
     public PlayerMovement(Player player)
     {
@@ -38,7 +38,8 @@ public class PlayerMovement
     }
     private void Move()
     {
-        if (direction == Vector2.zero)
+        float movementSpeed = player.GetPlayeSpeed();
+        if (direction == Vector2.zero || movementSpeed == 0)
         {
             DecelerateHorizontally();
             return;
@@ -50,10 +51,10 @@ public class PlayerMovement
         Vector3 targetRotationDirection = GetTargetRotationDirection(targetRotationYAngle);
 
 
-        float movementSpeed = speed;
+       
        
         Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
-        Debug.Log(movementSpeed+" "+ currentPlayerHorizontalVelocity+" "+ targetRotationDirection);
+      
        rbody.AddForce(targetRotationDirection * movementSpeed - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
     }
 
