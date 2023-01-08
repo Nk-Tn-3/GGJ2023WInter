@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
 
 
     [SerializeField] string lobby_scene_name;
+    [SerializeField] List<GameObject> disable_list;
 
     private void Awake()
     {
@@ -41,6 +42,10 @@ public class GameController : MonoBehaviour
     private void EndGame()
     {
         Invoke(nameof(Leave), end_duration);
+        foreach(GameObject disable in disable_list)
+        {
+            disable.SetActive(false);
+        }
         endscreen.SetActive(true);
     }
 
