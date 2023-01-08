@@ -11,22 +11,24 @@ public class PlayerInputScript : MonoBehaviour
 
     public void Start()
     {
-        /*player_movement = GetComponent<PlayerMovement>();
-        player_interact = GetComponent<PlayerInteract>();*/
+    
+        //player_interact = GetComponent<PlayerInteract>();
         player_script = GetComponent<Player>();
+        player_movement = player_script.movement;
     }
 
     public void OnMovement(InputValue value)
     {
         //player_movement.UpdateDirection(value.Get<Vector2>());
         //player_script.UpdateDirection(value.Get<Vector2>());
+        player_script.ReadMovementInput(value.Get<Vector2>());
         print("movin");
     }
 
     public void OnInteract()
     {
         //player_interact.Interact();
-        //player_script.UpdateInteract();
+        player_script.ReadInteract();
         print("pickin");
     }
 }

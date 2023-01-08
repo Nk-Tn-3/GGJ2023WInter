@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement 
 {
     
     private Player player;
@@ -26,16 +26,13 @@ public class PlayerMovement : MonoBehaviour
   
     }
 
-    public void CallFixedUpdate()
+    public void Movement(Vector2 dir)
 
     {
-        ReadMovementInput();
+        direction = dir;
         Move();
     }
-    private void ReadMovementInput()
-    {
-        direction = player.input.GetMovement();
-    }
+
     private void Move()
     {
         float movementSpeed = player.GetPlayeSpeed();

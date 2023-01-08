@@ -7,11 +7,11 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
 
-    public PlayerMovementNS.PlayerInput input { get; private set; }
+    
     [SerializeField]private Animator animator;
     [SerializeField] private SphereCollider pickUpCollider;
     private AnimationController playerAnimationController;
-    [field:SerializeField]private PlayerMovement movement;
+    public PlayerMovement movement;
     [SerializeField] private float playerSpeed=5f;
     private float currSpeed = 5f;
     public Rigidbody Rigidbody { get; private set; }
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        input = GetComponent<PlayerMovementNS.PlayerInput>();
+        
         Rigidbody = GetComponent<Rigidbody>();
         playerAnimationController = new AnimationController();
         playerAnimationController.Initizalize(animator); 
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement.CallFixedUpdate();
+        movement.Movement(movementData);
     }
 
 
@@ -48,23 +48,23 @@ public class Player : MonoBehaviour
     void HandleInput()
     {
   
-            ReadMovementInput();
+           
 
       
     }
 
 
-    void ReadMovementInput()
+    public void ReadMovementInput(Vector2 moveDir)
     {
-        movementData = input.GetMovement();
-        bool pick = input.GetPickTrigger();
-        playerAnimationController.Update(movementData,pick);
-        
-        //not in use from trying to merge
-        /*if(pick)
-            pick = false;*/
+        movementData = moveDir;
+        playerAnimationController.Update(movementData);
+     
     }
+    public void ReadInteract()
+    {
 
+        playerAnimationController.Update(true);
+    }
     public void AnimationExitEvent()
     {
         playerAnimationController.PickUpEnd();

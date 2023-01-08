@@ -21,14 +21,21 @@ public class AnimationController
     {
         animator = controller;
     }
-    public void Update(Vector2 movement,bool pick)
+    public void Update(Vector2 movement)
     {
         this.movement = movement;
-        isPickingUp= pick;
+       
         TryPlayAnim();
     
     }
 
+    public void Update(bool pick)
+    {
+      
+        isPickingUp = pick;
+        TryPlayAnim();
+
+    }
 
     private void TryPlayAnim()
     {
