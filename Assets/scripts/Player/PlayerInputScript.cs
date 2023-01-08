@@ -18,10 +18,6 @@ public class PlayerInputScript : MonoBehaviour
     }
 
 
-    public void DisablePickUp()
-    {
-
-    }
     public void OnMovement(InputValue value)
     {
         //player_movement.UpdateDirection(value.Get<Vector2>());
