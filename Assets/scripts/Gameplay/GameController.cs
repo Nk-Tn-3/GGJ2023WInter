@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     public float gameDurationTime = 10;
     public Text timerTXT;
 
+    [SerializeField] string lobby_scene_name;
+
     private void Update()
     {
         // hotkey to reset the current scene
@@ -23,7 +25,7 @@ public class GameController : MonoBehaviour
         }
         else // timer has expired
         {
-            print("game done");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(lobby_scene_name);
         }
     }
 
