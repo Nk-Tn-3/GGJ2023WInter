@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Player2
   - Lobby_Controller
+  - Player3
+  - Player4
   layers:
   - Default
   - TransparentFX
