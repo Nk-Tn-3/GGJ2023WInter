@@ -11,12 +11,20 @@ namespace PlayerMovementNS
         public PlayerInputActions inputActions { get; private set; }
         public PlayerInputActions.PlayerActions playerActions { get; private set; }
         public PlayerInputActions.Player2Actions playerActions2 { get; private set; }
+        public PlayerInputActions.Player3Actions playerActions3 { get; private set; }
+        public PlayerInputActions.Player4Actions playerActions4{ get; private set; }
         private void Awake()
         {
             inputActions = new PlayerInputActions();
             if (gameObject.CompareTag("Player2"))
             {
                 playerActions2 = inputActions.Player2;
+            }
+            else if (gameObject.CompareTag("Player3")){
+                playerActions3 = inputActions.Player3;
+            }
+            else if (gameObject.CompareTag("Player4")){
+                playerActions4= inputActions.Player4;
             }
             else
             {
@@ -33,6 +41,14 @@ namespace PlayerMovementNS
             {
                 return playerActions2.Movement.ReadValue<Vector2>();
             }
+            else if (gameObject.CompareTag("Player3"))
+            {
+                return playerActions3.Movement.ReadValue<Vector2>();
+            }
+            else if (gameObject.CompareTag("Player4"))
+            {
+                return playerActions4.Movement.ReadValue<Vector2>();
+            }
             return playerActions.Movement.ReadValue<Vector2>();
         }
 
@@ -41,6 +57,14 @@ namespace PlayerMovementNS
             if (gameObject.CompareTag("Player2"))
             {
                 return playerActions2.PickUp.triggered;
+            }
+            else if (gameObject.CompareTag("Player3"))
+            {
+                return playerActions3.PickUp.triggered;
+            }
+            else if (gameObject.CompareTag("Player4"))
+            {
+                return playerActions4.PickUp.triggered;
             }
             return playerActions.PickUp.triggered;
         }

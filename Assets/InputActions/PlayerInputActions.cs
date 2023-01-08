@@ -206,6 +206,190 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Player3"",
+            ""id"": ""7789744b-c5e9-4a34-aeb6-03b09729fc7b"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""5ecc16cd-7b3a-4063-8a65-1769eccff2ce"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PickUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5fb03ce-c2f4-4293-ab9e-40271333c8c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""23364c88-5bbb-4c6a-afbc-fdfb13edaa73"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""a1389c09-de7d-4c6d-bd97-42611359e65b"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c6c04a50-ffb1-4289-bbbc-1fcf7aea7bb1"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7037d80a-399c-4882-85f4-c36256cd3a16"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""a4e37124-dd3f-4292-b067-407082702b9b"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad7dd598-bc6e-43b7-9a06-1e49787d3ade"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player4"",
+            ""id"": ""2e60778b-a5da-403b-b276-9389977ba2aa"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""cdd51ec7-7fdb-4508-9f76-93ed351dd235"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PickUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""3b030ba9-08f1-4c0a-9865-fe74f4adad3a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""aa3cb47c-050f-4fbd-ac7d-7497c95a9b16"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""bab9bbf9-5ecb-4c7e-94e9-279723ecd61a"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""a3058462-dcfb-40f7-891e-3719ed123123"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b5f94f3c-7e2e-44b2-867d-0e5ca0ee12fa"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""a39c1fda-caed-4c75-a56b-b2559adc10cc"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad1acbe0-d05d-4b6a-a8e0-ec6b17ce177e"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -218,6 +402,14 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Movement = m_Player2.FindAction("Movement", throwIfNotFound: true);
         m_Player2_PickUp = m_Player2.FindAction("PickUp", throwIfNotFound: true);
+        // Player3
+        m_Player3 = asset.FindActionMap("Player3", throwIfNotFound: true);
+        m_Player3_Movement = m_Player3.FindAction("Movement", throwIfNotFound: true);
+        m_Player3_PickUp = m_Player3.FindAction("PickUp", throwIfNotFound: true);
+        // Player4
+        m_Player4 = asset.FindActionMap("Player4", throwIfNotFound: true);
+        m_Player4_Movement = m_Player4.FindAction("Movement", throwIfNotFound: true);
+        m_Player4_PickUp = m_Player4.FindAction("PickUp", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -355,12 +547,104 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         }
     }
     public Player2Actions @Player2 => new Player2Actions(this);
+
+    // Player3
+    private readonly InputActionMap m_Player3;
+    private IPlayer3Actions m_Player3ActionsCallbackInterface;
+    private readonly InputAction m_Player3_Movement;
+    private readonly InputAction m_Player3_PickUp;
+    public struct Player3Actions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public Player3Actions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Player3_Movement;
+        public InputAction @PickUp => m_Wrapper.m_Player3_PickUp;
+        public InputActionMap Get() { return m_Wrapper.m_Player3; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player3Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer3Actions instance)
+        {
+            if (m_Wrapper.m_Player3ActionsCallbackInterface != null)
+            {
+                @Movement.started -= m_Wrapper.m_Player3ActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_Player3ActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_Player3ActionsCallbackInterface.OnMovement;
+                @PickUp.started -= m_Wrapper.m_Player3ActionsCallbackInterface.OnPickUp;
+                @PickUp.performed -= m_Wrapper.m_Player3ActionsCallbackInterface.OnPickUp;
+                @PickUp.canceled -= m_Wrapper.m_Player3ActionsCallbackInterface.OnPickUp;
+            }
+            m_Wrapper.m_Player3ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+                @PickUp.started += instance.OnPickUp;
+                @PickUp.performed += instance.OnPickUp;
+                @PickUp.canceled += instance.OnPickUp;
+            }
+        }
+    }
+    public Player3Actions @Player3 => new Player3Actions(this);
+
+    // Player4
+    private readonly InputActionMap m_Player4;
+    private IPlayer4Actions m_Player4ActionsCallbackInterface;
+    private readonly InputAction m_Player4_Movement;
+    private readonly InputAction m_Player4_PickUp;
+    public struct Player4Actions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public Player4Actions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Player4_Movement;
+        public InputAction @PickUp => m_Wrapper.m_Player4_PickUp;
+        public InputActionMap Get() { return m_Wrapper.m_Player4; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player4Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer4Actions instance)
+        {
+            if (m_Wrapper.m_Player4ActionsCallbackInterface != null)
+            {
+                @Movement.started -= m_Wrapper.m_Player4ActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_Player4ActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_Player4ActionsCallbackInterface.OnMovement;
+                @PickUp.started -= m_Wrapper.m_Player4ActionsCallbackInterface.OnPickUp;
+                @PickUp.performed -= m_Wrapper.m_Player4ActionsCallbackInterface.OnPickUp;
+                @PickUp.canceled -= m_Wrapper.m_Player4ActionsCallbackInterface.OnPickUp;
+            }
+            m_Wrapper.m_Player4ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+                @PickUp.started += instance.OnPickUp;
+                @PickUp.performed += instance.OnPickUp;
+                @PickUp.canceled += instance.OnPickUp;
+            }
+        }
+    }
+    public Player4Actions @Player4 => new Player4Actions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnPickUp(InputAction.CallbackContext context);
+    }
+    public interface IPlayer3Actions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnPickUp(InputAction.CallbackContext context);
+    }
+    public interface IPlayer4Actions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
