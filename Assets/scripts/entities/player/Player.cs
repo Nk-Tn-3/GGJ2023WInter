@@ -65,7 +65,11 @@ public class Player : MonoBehaviour
         movement.Movement(movementData);
     }
 
-
+    public void InitializeColor(CharacterColor playerColor)
+    {
+        color = new PlayerColor(this, playerColors);
+        color.Initialize();
+    }
 
     void HandleInput()
     {
