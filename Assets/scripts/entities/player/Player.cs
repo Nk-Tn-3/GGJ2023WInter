@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField]private Animator animator;
     [SerializeField] private SphereCollider pickUpCollider;
     private AnimationController playerAnimationController;
-
-
+    [field:SerializeField]private PlayerMovement movement;
+    public Rigidbody Rigidbody { get; private set; }
     private Vector2 movementData;
     
 
@@ -20,9 +20,12 @@ public class Player : MonoBehaviour
     void Awake()
     {
         input = GetComponent<PlayerMovementNS.PlayerInput>();
+        Rigidbody = GetComponent<Rigidbody>();
         playerAnimationController = new AnimationController();
         playerAnimationController.Initizalize(animator); 
         pickUpCollider.gameObject.SetActive(false);
+        movement = new PlayerMovement(this);
+        movement.Initialize();
     }
 
     // Update is called once per frame
@@ -33,7 +36,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        movement.FixedUpdate();
     }
 
 

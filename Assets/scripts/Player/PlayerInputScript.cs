@@ -16,7 +16,7 @@ public class PlayerInputScript : MonoBehaviour
 
     public void OnMovement(InputValue value)
     {
-        player_movement.UpdateDirection(value.Get<Vector2>());
+        //player_movement.UpdateDirection(value.Get<Vector2>());
     }
 
     public void OnInteract()
