@@ -18,6 +18,7 @@ public class PlayerHandler : MonoBehaviour
         player_id = GameManager.instance.players.Count;
         GameManager.instance.players.Add(gameObject);
         gameObject.transform.SetParent(GameManager.instance.transform);
+        print("Player id: " + player_id);
 
         //swap out player apearances
         /*GetComponent<PlayerColor>().color*/ 

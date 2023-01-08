@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
 
     public void InitializeColor(CharacterColor playerColor)
     {
-        color = new PlayerColor(this, playerColors);
+        color = new PlayerColor(this, playerColor);
         color.Initialize();
     }
 
