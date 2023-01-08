@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         else
         {
             GameManager.instance = this;
+            SoundManager.instance = GetComponentInChildren<SoundManager>();
             DontDestroyOnLoad(gameObject);
             players = new List<GameObject>();
         }

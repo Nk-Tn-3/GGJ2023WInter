@@ -20,7 +20,10 @@ public class PlayerHandler : MonoBehaviour
         gameObject.transform.SetParent(GameManager.instance.transform);
 
         //swap out player apearances
-        shirt_material = GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_materials[player_id];
+        /*GetComponent<PlayerColor>().color*/ 
+        GetComponent<Player>().InitializeColor(GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_colors[player_id]);
+        PlayerColor player_color = new PlayerColor(GetComponent<Player>(), GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_colors[player_id]);//
+        //shirt_material = GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_materials[player_id];
         //player_mesh.material = GameObject.FindGameObjectWithTag("Lobby_Controller").GetComponent<LobbyController>().player_materials[player_id];
     }
 }

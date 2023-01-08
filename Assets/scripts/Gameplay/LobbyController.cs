@@ -5,8 +5,9 @@ using UnityEngine;
 public class LobbyController : MonoBehaviour
 {
     //public List<GameObject> player_models;
-    public List<Material> player_materials;
-
+    //public List<Material> player_materials;
+    //public List<GameObject> player_variants;
+    public List<CharacterColor> player_colors;
     [SerializeField] string game_scene_name;
 
     //join

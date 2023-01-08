@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class PlayerColor 
+public class PlayerColor /*: MonoBehaviour //added mono so I could use the script*/
 {
     private Player player;
 

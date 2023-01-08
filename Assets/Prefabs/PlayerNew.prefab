@@ -734,6 +734,7 @@ GameObject:
   - component: {fileID: 7376251989573647017}
   - component: {fileID: 7376251989573647016}
   - component: {fileID: 7376251989573647023}
+  - component: {fileID: -3120175451143446350}
   m_Layer: 6
   m_Name: PlayerNew
   m_TagString: Player
@@ -808,8 +809,11 @@ MonoBehaviour:
     RotationTime: 0.2
     deceleration: 5
   playerSpeed: 5
+  currentRotation: {x: 0, y: 0, z: 0}
   rightHand: {fileID: 3620305558625534114}
-  ItemPositionInHand: {x: -0.005, y: 0.006, z: 0.005}
+  ItemPositionInHand: {x: 0, y: 0, z: 0}
+  playerColors: {fileID: 0}
+  hasItemPickedUp: 0
 --- !u!114 &7376251989573647017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +869,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b98fc3bd77df74abe3b9e03c26563d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3120175451143446350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376251987933771315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1c0ebe95fda7f4387bfdaa409c5f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_id: 0
+  player_object: {fileID: 7376251987933771315}
+  player_mesh: {fileID: 0}
+  shirt_material: {fileID: 0}
 --- !u!1 &7467273220130526611
 GameObject:
   m_ObjectHideFlags: 0
