@@ -29,9 +29,15 @@ public class Player : MonoBehaviour
         pickUpCollider.gameObject.SetActive(false);
         movement = new PlayerMovement(this);
         movement.Initialize();
+        
+      
+
         currSpeed = playerSpeed;
     }
-
+    private void Start()
+    {
+        ReadMovementInput(Vector2.zero);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -70,7 +76,7 @@ public class Player : MonoBehaviour
         playerAnimationController.PickUpEnd();
         pickUpCollider.gameObject.SetActive(false);
         currSpeed = playerSpeed;
-
+        playerAnimationController.Update(false);
     }
     public void AnimationEnterEvent() {
         playerAnimationController.PickUpStart();

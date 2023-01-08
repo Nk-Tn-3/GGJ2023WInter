@@ -17,18 +17,23 @@ public class PlayerInputScript : MonoBehaviour
         player_movement = player_script.movement;
     }
 
+
+    public void DisablePickUp()
+    {
+
+    }
     public void OnMovement(InputValue value)
     {
         //player_movement.UpdateDirection(value.Get<Vector2>());
         //player_script.UpdateDirection(value.Get<Vector2>());
         player_script.ReadMovementInput(value.Get<Vector2>());
-        print("movin");
+       
     }
 
     public void OnInteract()
     {
         //player_interact.Interact();
         player_script.ReadInteract();
-        print("pickin");
+     
     }
 }

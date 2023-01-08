@@ -23,7 +23,9 @@ public class PlayerMovement
    public void Initialize()
     {
         rbody = player.Rigidbody;
-  
+       Movement(new Vector2(0,1) * float.MinValue);
+
+
     }
 
     public void Movement(Vector2 dir)
