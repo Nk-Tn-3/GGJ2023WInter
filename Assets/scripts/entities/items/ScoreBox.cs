@@ -57,5 +57,36 @@ public class ScoreBox : MonoBehaviour
             myScore += hotItems.checkScoreOfItem("Turnip");
             thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
         }
+        else if(objectName.Contains("Carrot"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Carrot");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Chicken"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Chicken");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Potato"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Potato");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Radish"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Radish");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Tomato"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Tomato");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+
     }
 }
