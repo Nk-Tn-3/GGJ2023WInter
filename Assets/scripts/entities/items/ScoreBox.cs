@@ -9,12 +9,15 @@ public class ScoreBox : MonoBehaviour
     public GameObject playerWhoOwnsThisBasket;
     public Text thisBasketScoreTXT;
 
+    //reference to GUI canvas with HotItemsScores.cs attached
+    public HotItemScores hotItems;
+
     int myScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -31,9 +34,27 @@ public class ScoreBox : MonoBehaviour
         if(objectName.Contains("Pumpkin"))
         {
             // Score the pumpkin for the player
-            print(objectName);
             other.transform.position += downToCull;
-            myScore += 1;
+            // Check value of item through hotItems script
+            myScore += hotItems.checkScoreOfItem("Pumpkin");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Mushroom"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Mushroom");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Egg"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Egg");
+            thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
+        }
+        else if(objectName.Contains("Turnip"))
+        {
+            other.transform.position += downToCull;
+            myScore += hotItems.checkScoreOfItem("Turnip");
             thisBasketScoreTXT.text = playerWhoOwnsThisBasket.name + " Score: " + myScore;
         }
     }

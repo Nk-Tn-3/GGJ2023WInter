@@ -11,6 +11,7 @@ public class ItemSpawner : MonoBehaviour
 
     int thisItemCount = 0;
     public int thisItemMax = 1;
+    public float spawnRate = 1.0f;
 
     List<GameObject> itemList = new List<GameObject>();
 
@@ -18,7 +19,7 @@ public class ItemSpawner : MonoBehaviour
     void Start()
     {
         //Call spawnItem in 1 second, and every second afterwards forever
-        InvokeRepeating("SpawnItem", 1.0f, 1.0f);
+        InvokeRepeating("SpawnItem", 1.0f, spawnRate);
     }
 
 
